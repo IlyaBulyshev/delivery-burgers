@@ -1,0 +1,36 @@
+.best {
+    background: url("../../img/Bg/we.jpg") 50% no-repeat;
+    @include section;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.content-best {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+
+.best__title {
+    @include title($black);
+    margin-bottom: 80px;
+}
+
+.best__item {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+.best__item-icon {
+    margin-bottom: 30px;
+}
+
+.best__item-title {
+    @include text(24px, $black);
+    margin-bottom: 20px;
+}

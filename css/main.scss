@@ -1,0 +1,64 @@
+// mixin
+@mixin title($color) {
+    font-size: 72px;
+    color: $color;
+    font-family: gagalin;
+}
+
+@mixin btn() {
+	background: $red;
+	padding: 10px 10px;
+	border-radius: 5px;
+    color: $white;
+}
+
+@mixin text($size, $color) {
+	font-size: $size;
+	color: $color;
+	font-family: lifehack;
+}
+
+@mixin section {
+    height: 100vh;
+    min-height: 650px;
+}
+
+
+// color 
+$black: #2f3234;
+$fonts: #8a8988;
+$yellow: #f9b43b;
+$orange: #f08c33;
+$red: #e45028;
+$white: #ffffff;
+
+//footer
+$footer-height: 58px;
+
+// placeholder
+%clearfix {
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+// layout
+@import "layout/normalize";
+@import "layout/adjustment";
+@import "layout/font";
+@import "layout/font-awesome";
+
+
+// section
+@import "section/home";
+@import "section/best";
+@import "section/burger";
+@import "section/team";
+@import "section/menu";
+@import "section/reviews";
+@import "section/order";
+@import "section/map";
+@import "section/fixed-menu";
+@import "section/reviews-popup";

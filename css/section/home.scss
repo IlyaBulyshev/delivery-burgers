@@ -1,0 +1,126 @@
+.home {
+    @include section;
+    background: url("../img/Bg/first-screen.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    @extend %clearfix;
+    padding-top: 11px;
+}
+
+.header__logo {
+    float: left;
+    width: 32%;
+}
+
+.header__menu {
+    float: right;
+    width: 68%;
+    color: $white;
+    padding-top: 20px;
+}
+
+.nav {
+    display: inline-block;
+    vertical-align: -14px;
+}
+
+.nav__list {
+    width: 100%;
+}
+
+.nav__item {
+   float: left;
+   font-size: 13px;
+   text-transform: uppercase;
+   font-weight: 500;
+   margin-right: 15px;
+   &:after {
+         content: "";
+         display: inline-block;
+         border-radius: 50%;
+         width: 4px;
+         height: 4px;
+         background: $white;
+     }
+     &:last-child:after{
+     	display: none;
+     }
+}
+
+.nav__link {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+     &:hover {
+         text-decoration: underline;
+     }
+     
+}
+
+.nav__link, .order-link {
+    color: $white;
+}
+
+.order-link {
+	display: inline-block;
+    @include btn;
+    vertical-align: top;
+}
+
+
+.home__content {
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+}
+
+.content-left__img {
+	width: 50%;
+	float: left;
+}
+
+.img__burger {
+	background: url("../../img/content/drops.png") no-repeat;
+	background-position: 10px 65px;
+}
+
+.burger-foto {
+	padding-left: 40px;
+}
+
+.home__content-righ {
+	float: right;
+	width: 50%;
+	padding-top: 120px;
+}
+
+.section__title {
+	@include title ($yellow);
+}
+
+.section__desk {
+	@include text(65px, $white);
+	text-transform: lowercase;
+	line-height: 0.9em;
+	padding-top: 17px;
+
+}
+
+
+.down-arrow {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+        &:hover {
+            transform: scale(1.5);
+            outline-width: 0;
+        }
+}

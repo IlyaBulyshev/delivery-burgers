@@ -1,0 +1,51 @@
+.fixed-menu {
+    position: fixed;
+    top: 90px;
+    right: 40px;
+}
+
+.fixed-menu__item {
+    margin-bottom: 5px;
+}
+
+
+.fixed-menu__link:before, .fixed-menu__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
+
+.fixed-menu__link {
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+     &:after {
+         background: white;
+         width: 6px;
+         height: 6px;
+     }
+     &:before {
+         width: 0;
+         height: 0;
+         border-radius: 50%;
+         border: 1px solid white;
+         opacity: 0;
+         transition: .3s;
+     }
+
+     &:hover:before {
+        opacity: 1;
+        width: 16px;
+        height: 16px;
+     }
+}
+
+
+

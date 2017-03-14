@@ -1,0 +1,152 @@
+.order {
+	background: url("../../img/Bg/Rectangle.jpg") center no-repeat;
+	background-size: cover;
+	@include section;
+}
+
+.container-order {
+	width: 940px;
+	margin: 0 auto;
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.section-title {
+	@include title($yellow);
+	margin-bottom: 85px;
+	text-align: center;
+}
+
+.order-form {
+	@extend %clearfix;
+}
+
+.form__tag-col {
+	float: left;
+	width: 50%;
+}
+
+.form__row {
+	@extend %clearfix;
+}
+
+.form__row-block {
+	margin-bottom: 25px;
+	display: block;
+}
+
+.form__row-label {
+	font-size: 13px;
+	color: $white;
+	font-weight: 300;
+	margin-bottom: 8px;
+}
+
+.form__row-block--double {
+	float: left;
+	margin-right: 20px;
+	width: 210px;
+}
+
+.form__row-block--street {
+	width: 440px;
+}
+
+.form__row-block--quatro {
+	float: left;
+	width: 95px;
+	margin-right: 20px;
+}
+
+.form__row-input {
+	width: 100%;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 14px;
+	border: 1px solid #d1cfcb;
+}
+
+.form__row-block--textarea {
+	margin-bottom: 12px;
+}
+
+.form__row-input--textarea {
+	height: 105px;
+}
+
+.form__radio {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+
+.form__radio-elem {
+	position: absolute;
+	left: -9999px;
+}
+
+.form__radio-fake {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	background: $white;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	 &:after {
+		 content: "";
+		 position: absolute;
+		 width: 0px;
+		 height: 0px;
+		 border-radius: 50%;
+		 background: $red;
+		 top: 50%;
+		 left: 50%;
+		 transition: width .3s, height .3s; 
+		 transform: translate(-50%, -50%);
+	 }
+	 
+}
+
+.form__radio-title {
+	display: inline-block;
+	font-size: 13px;
+	color: $white;
+	vertical-align: middle;
+}
+
+.form__radio-elem:checked + .form__radio-fake:after {
+  width: 8px;
+  height: 8px;
+}
+
+.radio-fake--checkbox {
+	border-radius: 0px;
+}
+
+.form__radio--checkbox .form__radio-elem:checked + .form__radio-fake:after {
+	background: url("../../img/icons/check.svg") center no-repeat;
+	background-size: 11px;
+	width: 20px;
+	height: 8px;
+}
+
+.form__button {
+	@include btn;
+	border: 0;
+	margin-right: 15px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.form__buttom--reset {
+	background: transparent;
+	border: 0;
+	color: $white;
+	font-size: 13px;
+	font-weight: 300;
+	cursor: pointer;
+}

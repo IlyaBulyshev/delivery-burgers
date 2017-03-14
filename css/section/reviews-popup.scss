@@ -1,0 +1,25 @@
+.reviews-popup {
+    position: relative;
+    width: 450px;
+    border-radius: 5px;
+    background: $white;
+    padding: 30px 20px;
+    display: none;
+}
+
+.popup__close {
+    position: absolute;
+    right: 15px;
+}
+
+.popup__title {
+    font-size: 14px;
+    color: $black;
+    font-family: gagalin;
+    margin-bottom: 25px; 
+}
+
+.popup__text {
+    font-size: 14px;
+    font-weight: 300;
+}
