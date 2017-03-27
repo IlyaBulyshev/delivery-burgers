@@ -68,6 +68,10 @@
 	display: inline-block;
     @include btn;
     vertical-align: top;
+    transition: .5s;
+        &:hover {
+            background: $orange;
+        }
 }
 
 

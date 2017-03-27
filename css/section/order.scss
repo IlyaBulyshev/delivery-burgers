@@ -65,14 +65,17 @@
 	padding: 5px 10px;
 	font-size: 14px;
 	border: 1px solid #d1cfcb;
+
 }
 
 .form__row-block--textarea {
 	margin-bottom: 12px;
+	
 }
 
 .form__row-input--textarea {
 	height: 105px;
+	resize: none;
 }
 
 .form__radio {
@@ -140,6 +143,10 @@
 	font-size: 14px;
 	font-weight: 500;
 	cursor: pointer;
+	 transition: .5s;
+	 &:hover {
+		 background: $orange;
+	 }
 }
 
 .form__buttom--reset {
@@ -150,3 +157,4 @@
 	font-weight: 300;
 	cursor: pointer;
 }
+

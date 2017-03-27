@@ -1,8 +1,13 @@
+.container {
+    @extend %clearfix;
+}
+
 .burger {
     background: url("../../img/Bg/menu.jpg") center no-repeat;
     background-size: cover;
     @include section;
 }
+
 
 .burger__container {
     position: relative;
@@ -10,15 +15,35 @@
     top: 50%;
 }
 
+.burger-slider-wrap {
+    position: relative;
+    overflow: hidden;
+    min-height: 490px;
+}
+
+.burger-slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.stage-outer {
+    display: inline-block;
+}
+
 .burger-slider__item {
     position: relative;
     @extend %clearfix;
     padding-bottom: 85px;
+    width: 940px;
+    display: inline-block;
 }
 
-.burger-slider-wrap {
-    position: relative;
-}
+
+
+
 
 .ingredients {
     width: 90px;
@@ -124,16 +149,22 @@
     width: 50%;
     float: left;
     padding-top: 85px;
+
+}
+
+.burger-slider__img {
+    text-align: center;
 }
 
 .burger-slider__pic {
-    width: 100%;
+    width: 425px;
 }
 
 
 .burger-slider__right {
     width: 50%;
     float: left;
+    white-space: normal;
 }
 
 
@@ -149,7 +180,7 @@
     line-height: 2em;
     font-weight: 300;
     width: 100%;
-
+    max-width: 430px;
 }
 
 
@@ -173,6 +204,11 @@
     @include btn;
     font-size: 14px;
     margin-left: 24px;
+    transition: all .3s ease;
+    display: inline-block;
+        &:hover {
+            transform: scale(1.1);
+        } 
 }
 
 .burger-slider__btn {
@@ -182,11 +218,14 @@
 }
 
 .slider--next {
-    right: -40px;
+    right: -7px;
+    z-index: 10;
+    
 }
 
 .slider--prev {
-    left: -40px;
+    left: -6px;
+   z-index: 10;
 }
 
 .burger-slider__btn--next {

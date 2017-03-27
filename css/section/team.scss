@@ -22,13 +22,15 @@
   
 }
 
-.team-list {                  
-}
 
 .team-item {
     position: relative;
     margin-bottom: 40px;
-     
+    .team-item__content {
+        display: none;
+        @extend %clearfix; 
+        padding-top: 14px;
+    }
 }
 
 .team-item__triggle {
@@ -37,24 +39,45 @@
     color: $white;
     position: relative;
     display: block;
+    cursor: pointer;
+    transition: .3s;
         &:before {
         content: "";
-        border-top: 6px solid $yellow;
+        border-top: 7px solid $yellow;
         border-right: 5px solid transparent;
         border-left: 5px solid transparent;
-        border-bottom: 5px solid transparent;
+        border-bottom: 0px solid transparent;
         width: 0;
         height: 0;
         position: absolute;
         left: -20px;
         top: 6px;
-    }
+        transform: rotate(0deg);
+        transition: .3s;
+        }
+        &:hover {
+            color: $yellow;
+        }
 }
 
 .team-item__content {
-    @extend %clearfix; 
-    padding-top: 14px;
+    
 }
+
+// .team-item--active 
+.active {
+    .team-item__content {
+        // display: block;
+    }
+    .team-item__triggle {
+        color: $yellow;
+        &:before {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+
 
 .team-item__ava {
     float: left; 

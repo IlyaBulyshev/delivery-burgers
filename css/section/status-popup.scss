@@ -1,0 +1,27 @@
+.status-popup {
+    border-radius: 5px;
+    display: none;
+    width: 250px;
+}
+
+.status-popuo__inner {
+    text-align: center;
+    padding: 20px;
+}
+
+.inner-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+.inner-btn__close {
+    @include btn;
+    display: inline-block;
+    transition: .5s;
+}
+
+
+.inner-btn__close:hover {
+     background: $orange;
+ }

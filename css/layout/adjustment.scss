@@ -15,11 +15,29 @@ body {
     height: 100%;
 }
 
-.wrapper {
+.maincontent {
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: 1s;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // right: 0;
+
+}
+
+.section {
     min-height: 100%;
-    min-width: 940px;
+    height: 100vh;
+    min-height: 650px;
+}
+
+
+.wrapper {
+    height: 100%;
     overflow: hidden;
-    position: relative;     
+    position: relative;  
+
 }
 
 .container {

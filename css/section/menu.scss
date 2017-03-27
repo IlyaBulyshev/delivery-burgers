@@ -16,12 +16,25 @@
     position: absolute;
     right: 0;
     top: 0;
-    bottom: 0; 
+    bottom: 0;
+    @extend %clearfix; 
 }
 
 .menu__item {
     float: left;
     height: 100%;
+    @extend %clearfix;
+        
+}
+
+.active {
+    .menu__item-title {
+        color: $yellow;
+     }
+
+     .menu__item-content {
+        //   width: 540px;
+     }
 }
 
 .menu__item-trigger {
@@ -30,7 +43,8 @@
     height: 100%;
     float: left;
     position: relative;
-    background:90% center no-repeat;
+    background-repeat: no-repeat;
+    background-position: 90%, center;
     background-size: cover;
      &:after {
          content: "";
@@ -50,9 +64,17 @@
     top: 50%;
     height: 80px;
     width: 650px;
-    left: -270px;
+    left: 50%;
     margin-top: -40px;
+    margin-left: -312px;
+    // padding-top: 15px;
     z-index: 10;
+    transform: 1s;
+    white-space: nowrap;
+        &:hover {
+            color: $orange;
+        }
+
 }
 
 .menu__item-content {
@@ -60,18 +82,12 @@
     opacity: .9;
     float: left;
     background: $black;
+    width: 0;
+    color: $white;
+    overflow: hidden;
 } 
 
-.menu__item-text--active {
+.menu__item-text {
     width: 540px;
-    height: 100%;
-    background: $black;
-    font-size: 14px;
-    color: $white;
-    line-height: 2em;
-}
-
-.menu__text {
-    display: block;
-    margin: 60px 30px;
+    padding: 20px;
 }

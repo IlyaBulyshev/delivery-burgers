@@ -9,7 +9,7 @@
 }
 
 
-.fixed-menu__link:before, .fixed-menu__link:after {
+.fixed-menu__item:before, .fixed-menu__item:after {
     content: "";
     display: block;
     position: absolute;
@@ -21,11 +21,12 @@
 }
 
 
-.fixed-menu__link {
+.fixed-menu__item {
     width: 16px;
     height: 16px;
     display: block;
     position: relative;
+    cursor: pointer;
      &:after {
          background: white;
          width: 6px;
@@ -45,6 +46,22 @@
         width: 16px;
         height: 16px;
      }
+}
+
+.activation {
+    &:before {
+        opacity: 1;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.fixed-menu__link {
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    z-index: 10;
 }
 
 

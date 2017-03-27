@@ -1,15 +1,18 @@
 .reviews-popup {
     position: relative;
-    width: 450px;
     border-radius: 5px;
     background: $white;
     padding: 30px 20px;
     display: none;
+    max-width: 460px;
 }
 
 .popup__close {
     position: absolute;
     right: 15px;
+    display: block;
+    width: 15px;
+    height: 15px;
 }
 
 .popup__title {
@@ -22,4 +25,12 @@
 .popup__text {
     font-size: 14px;
     font-weight: 300;
+}
+
+.fancybox-bg {
+    background: rgba(#2f3324, .92);
+}
+
+.fancybox-close-small {
+    display: none;
 }

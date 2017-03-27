@@ -62,3 +62,7 @@ $footer-height: 58px;
 @import "section/map";
 @import "section/fixed-menu";
 @import "section/reviews-popup";
+@import "section/status-popup";
+
+//plugins
+@import "plugins/jquery.fancybox.min";
