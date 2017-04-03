@@ -1,0 +1,17 @@
+{
+  "name": "delivery-burgers",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sextans"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/IlyaBulyshev/delivery-burgers",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
